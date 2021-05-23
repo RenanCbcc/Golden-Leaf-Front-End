@@ -1,6 +1,8 @@
 .sidebar {
     width     : 345px;
     height    : 100%;
+    left      : 0;
+    top       : 0;
     position  : fixed;
     background: #103D4A;
 }
@@ -39,5 +41,5 @@ a {
 
 .sidebar__menu__link span:hover {
     text-decoration: underline;
-    font-size   : 1.2rem;
+    font-size      : 1.2rem;
 }
