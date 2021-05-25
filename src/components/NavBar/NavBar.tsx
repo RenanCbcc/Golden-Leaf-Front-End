@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../../css/navbar.css"
+
 type Props = {
     sideBarOpen: boolean;
     toogleSideBar(): void;
@@ -8,14 +9,6 @@ type Props = {
 const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
     return (
         <header className="navbar">
-
-            <div className="navbar__icon" onClick={() => { toogleSideBar() }}>
-                <h2 className="label">
-                    <i className="las la-bars"></i>
-                    <span>Palma de Ouro</span>
-                </h2>
-
-            </div>
 
             <div className="search-wrapper">
                 <span className="las la-search"></span>

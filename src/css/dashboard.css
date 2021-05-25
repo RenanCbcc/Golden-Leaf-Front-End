@@ -1,3 +1,15 @@
-.main {
-    background-color: #f2f7fb;
+body {
+    font-family: 'Opens Sans', sans-serif;
+}
+
+.main-content {
+    position   : relative;
+    margin-left: 300px;
+}
+
+main {
+    margin-top: 60px;
+    background: #f1f5f9;
+    min-height: 90vh;
+    padding   : 1rem;
 }

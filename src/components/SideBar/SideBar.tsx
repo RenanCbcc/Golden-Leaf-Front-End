@@ -10,68 +10,67 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
     return (
 
         <div className="sidebar">
-            <div className="sidebar-brand" onClick={() => { toogleSideBar() }}>
-                <h2>
+
+            <div className="sidebar__header" onClick={() => { toogleSideBar() }}>
+                <h2 className="brand">
                     <i className="las la-leaf"></i>
-                Palma de Ouro
+                    <span>Palma de Ouro</span>
                 </h2>
-
+                <i className="las la-bars"></i>
             </div>
-            <ul className="sidebar__menu">
 
-                <li className="sidebar__menu__item">
-                    <a href="#" className="sidebar__menu__link">
-                        <i className="las la-chart-bar">
+            <div className="sidebar__menu">
+                <ul>
+
+                    <li className="sidebar__menu__item">
+                        <a href="#" className="sidebar__menu__link">
+                            <i className="las la-chart-bar" />
                             <span>DashBoard</span>
-                        </i>
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
-                <li className="sidebar__menu__item">
-                    <a href="#" className="sidebar__menu__link">
-                        <i className="las la-shapes">
+                    <li className="sidebar__menu__item">
+                        <a href="#" className="sidebar__menu__link">
+                            <i className="las la-shapes" />
                             <span>Categorias</span>
-                        </i>
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
-                <li className="sidebar__menu__item">
-                    <a href="#" className="sidebar__menu__link">
-                        <i className="las la-shopping-bag">
+                    <li className="sidebar__menu__item">
+                        <a href="#" className="sidebar__menu__link">
+                            <i className="las la-shopping-bag" />
                             <span>Produtos</span>
-                        </i>
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
-                <li className="sidebar__menu__item">
-                    <a href="#" className="sidebar__menu__link" >
-                        <i className="las la-user-friends">
+                    <li className="sidebar__menu__item">
+                        <a href="#" className="sidebar__menu__link" >
+                            <i className="las la-user-friends" />
                             <span>Clintes</span>
-                        </i>
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
-                <li className="sidebar__menu__item">
-                    <a href="#" className="sidebar__menu__link">
-                        <i className="las la-shopping-cart">
+                    <li className="sidebar__menu__item">
+                        <a href="#" className="sidebar__menu__link">
+                            <i className="las la-shopping-cart" />
                             <span>Pedidos</span>
-                        </i>
-                    </a>
+                        </a>
 
-                </li>
+                    </li>
 
-                <li className="sidebar__menu__item">
-                    <a className="sidebar__menu__link" href="#">
-                        <i className="las la-credit-card">
+                    <li className="sidebar__menu__item">
+                        <a className="sidebar__menu__link" href="#">
+                            <i className="las la-credit-card" />
                             <span>Pagamentos</span>
-                        </i>
-                    </a>
-                </li>
+                        </a>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+
         </div>
 
     )
