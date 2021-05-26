@@ -1,5 +1,6 @@
 body {
     font-family: 'Opens Sans', sans-serif;
+    box-sizing : border-box;
 }
 
 .main-content {
@@ -10,6 +11,10 @@ body {
 main {
     margin-top: 60px;
     background: #f1f5f9;
-    min-height: 90vh;
+    min-height: 85vh;
     padding   : 1rem;
+}
+
+.active {
+    margin-left: 80px;
 }

@@ -13,6 +13,10 @@
     box-shadow      : 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.active--navbar{
+    width           : calc(100% - 80px);
+}
+
 .search-wrapper {
     border       : 1px solid #ccc;
     border-radius: 30px;

@@ -6,9 +6,9 @@ type Props = {
     toogleSideBar(): void;
 };
 
-const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
+const NavBar: React.FC<Props> = ({ sideBarOpen }) => {
     return (
-        <header className="navbar">
+        <header className={sideBarOpen ? 'navbar active--navbar' : 'navbar'}>
 
             <div className="search-wrapper">
                 <span className="las la-search"></span>

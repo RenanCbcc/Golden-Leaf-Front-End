@@ -6,17 +6,17 @@ type Props = {
     toogleSideBar(): void;
 };
 
+
 const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
     return (
+        <div className={sideBarOpen ? 'sidebar inactive--sidebar' : 'sidebar'}>
 
-        <div className="sidebar">
-
-            <div className="sidebar__header" onClick={() => { toogleSideBar() }}>
-                <h2 className="brand">
+            <div className={sideBarOpen ? 'sidebar__header header--inactive' : 'sidebar__header'}>
+                <h2 className={sideBarOpen ? 'brand inactive--brand' : 'brand'} >
                     <i className="las la-leaf"></i>
                     <span>Palma de Ouro</span>
                 </h2>
-                <i className="las la-bars"></i>
+                <i className="las la-bars" onClick={() => { toogleSideBar() }} />
             </div>
 
             <div className="sidebar__menu">
@@ -25,14 +25,17 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
                     <li className="sidebar__menu__item">
                         <a href="#" className="sidebar__menu__link">
                             <i className="las la-chart-bar" />
-                            <span>DashBoard</span>
+                            <span className={sideBarOpen ? 'inactive--span' : ''}>DashBoard
+                            </span>
                         </a>
                     </li>
 
                     <li className="sidebar__menu__item">
                         <a href="#" className="sidebar__menu__link">
                             <i className="las la-shapes" />
-                            <span>Categorias</span>
+                            <span className={sideBarOpen ? 'inactive--span' : ''}>
+                                Categorias
+                                </span>
                         </a>
 
                     </li>
@@ -40,7 +43,9 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
                     <li className="sidebar__menu__item">
                         <a href="#" className="sidebar__menu__link">
                             <i className="las la-shopping-bag" />
-                            <span>Produtos</span>
+                            <span className={sideBarOpen ? 'inactive--span' : ''}>
+                                Produtos
+                                </span>
                         </a>
 
                     </li>
@@ -48,7 +53,9 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
                     <li className="sidebar__menu__item">
                         <a href="#" className="sidebar__menu__link" >
                             <i className="las la-user-friends" />
-                            <span>Clintes</span>
+                            <span className={sideBarOpen ? 'inactive--span' : ''}>
+                                Clintes
+                            </span>
                         </a>
 
                     </li>
@@ -56,7 +63,9 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
                     <li className="sidebar__menu__item">
                         <a href="#" className="sidebar__menu__link">
                             <i className="las la-shopping-cart" />
-                            <span>Pedidos</span>
+                            <span className={sideBarOpen ? 'inactive--span' : ''}>
+                                Pedidos
+                            </span>
                         </a>
 
                     </li>
@@ -64,7 +73,9 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
                     <li className="sidebar__menu__item">
                         <a className="sidebar__menu__link" href="#">
                             <i className="las la-credit-card" />
-                            <span>Pagamentos</span>
+                            <span className={sideBarOpen ? 'inactive--span' : ''}>
+                                Pagamentos
+                                </span>
                         </a>
                     </li>
 

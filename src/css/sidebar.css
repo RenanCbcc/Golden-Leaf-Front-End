@@ -1,13 +1,14 @@
 .sidebar {
     width     : 300px;
     height    : 100%;
-    left      : 0;
     top       : 0;
     position  : fixed;
     z-index   : 100;
     color     : #fff;
     background: #103D4A;
+
 }
+
 
 .sidebar__header {
     display        : flex;
@@ -27,9 +28,9 @@
 }
 
 .sidebar__menu__link {
-    color: #fff;
-    padding-left: 1rem;
-    font-size   : 1.1rem;
+    color          : #fff;
+    padding-left   : 1rem;
+    font-size      : 1.1rem;
     text-decoration: none;
 }
 
@@ -42,4 +43,21 @@
 .sidebar__menu__link span:hover {
     text-decoration: underline;
     font-size      : 1.2rem;
+}
+
+
+.inactive--sidebar {
+    width: 80px;
+}
+
+.inactive--span {
+    display: none;
+}
+
+.inactive--brand {
+    display: none;
+}
+
+.header--inactive {
+    padding: 0rem 2rem;
 }

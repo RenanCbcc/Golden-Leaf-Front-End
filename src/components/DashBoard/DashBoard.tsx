@@ -14,7 +14,7 @@ const DashBoard = () => {
         <div>
             <SideBar sideBarOpen={sideBarOpen} toogleSideBar={toogleSideBar} />
 
-            <div className="main-content">
+            <div className={sideBarOpen ? 'main-content active' : 'main-content'}>
                 <NavBar sideBarOpen={sideBarOpen} toogleSideBar={toogleSideBar} />
                 <main>
 
