@@ -1,20 +1,19 @@
 .navbar {
     position        : fixed;
     top             : 0;
-    z-index         : 100;
     width           : calc(100% - 300px);
     display         : flex;
     justify-content : space-around;
     align-items     : center;
     height          : 60px;
-    padding         : 0.5rem 1rem;
+    padding         : 0.5rem 0rem;
     background-color: #FFF;
     color           : #00161C;
     box-shadow      : 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.active--navbar{
-    width           : calc(100% - 80px);
+.active--navbar {
+    width: calc(100% - 80px);
 }
 
 .search-wrapper {
@@ -51,4 +50,12 @@
 .user.wrapper small {
     border-radius: 50%;
     margin-right : 1rem;
+}
+
+@media screen and (max-width:750px) {
+
+    .navbar {
+        flex-direction: column-reverse;
+        height: 125px;
+    }
 }

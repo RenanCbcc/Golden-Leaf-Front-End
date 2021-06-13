@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import NavBar from '../NavBar/NavBar';
 import SideBar from '../SideBar/SideBar';
 import "../../css/dashboard.css"
+import Routes from '../../pages/Routes';
+import { BrowserRouter } from 'react-router-dom';
 
 const DashBoard = () => {
     const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -12,24 +14,18 @@ const DashBoard = () => {
 
     return (
         <div>
-            <SideBar sideBarOpen={sideBarOpen} toogleSideBar={toogleSideBar} />
+            <BrowserRouter>
+                <SideBar sideBarOpen={sideBarOpen} toogleSideBar={toogleSideBar} />
 
-            <div className={sideBarOpen ? 'main-content active' : 'main-content'}>
-                <NavBar sideBarOpen={sideBarOpen} toogleSideBar={toogleSideBar} />
-                <main>
-
-                    <h2>Resumo</h2>
-                    <div className="dashboard-cards">
-                        <div className="card-sigle">
-                            <div className="card-body">
-Teste
-                            </div>
+                <div className={sideBarOpen ? 'main-content active' : 'main-content'}>
+                    <NavBar sideBarOpen={sideBarOpen} toogleSideBar={toogleSideBar} />
+                    <main>
+                        <div className="dashboard-card">
+                            <Routes />
                         </div>
-
-                    </div>
-                </main>
-            </div>
-
+                    </main>
+                </div>
+            </BrowserRouter>
         </div>
     )
 }

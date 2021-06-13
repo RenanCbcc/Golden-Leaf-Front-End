@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/sidebar.css'
 
 type Props = {
     sideBarOpen: boolean;
     toogleSideBar(): void;
 };
-
 
 const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
     return (
@@ -20,66 +20,68 @@ const NavBar: React.FC<Props> = ({ sideBarOpen, toogleSideBar }) => {
             </div>
 
             <div className="sidebar__menu">
+
                 <ul>
 
                     <li className="sidebar__menu__item">
-                        <a href="#" className="sidebar__menu__link">
+                        <Link to="/" className="sidebar__menu__link">
                             <i className="las la-chart-bar" />
                             <span className={sideBarOpen ? 'inactive--span' : ''}>DashBoard
                             </span>
-                        </a>
+                        </Link>
                     </li>
 
                     <li className="sidebar__menu__item">
-                        <a href="#" className="sidebar__menu__link">
+                        <Link to="/categories" className="sidebar__menu__link">
                             <i className="las la-shapes" />
                             <span className={sideBarOpen ? 'inactive--span' : ''}>
                                 Categorias
-                                </span>
-                        </a>
+                            </span>
+                        </Link>
 
                     </li>
 
                     <li className="sidebar__menu__item">
-                        <a href="#" className="sidebar__menu__link">
+                        <Link to="/products" className="sidebar__menu__link">
                             <i className="las la-shopping-bag" />
                             <span className={sideBarOpen ? 'inactive--span' : ''}>
                                 Produtos
-                                </span>
-                        </a>
+                            </span>
+                        </Link>
 
                     </li>
 
                     <li className="sidebar__menu__item">
-                        <a href="#" className="sidebar__menu__link" >
+                        <Link to="/clients" className="sidebar__menu__link" >
                             <i className="las la-user-friends" />
                             <span className={sideBarOpen ? 'inactive--span' : ''}>
                                 Clintes
                             </span>
-                        </a>
+                        </Link>
 
                     </li>
 
                     <li className="sidebar__menu__item">
-                        <a href="#" className="sidebar__menu__link">
+                        <Link to="/orders" className="sidebar__menu__link">
                             <i className="las la-shopping-cart" />
                             <span className={sideBarOpen ? 'inactive--span' : ''}>
                                 Pedidos
                             </span>
-                        </a>
+                        </Link>
 
                     </li>
 
                     <li className="sidebar__menu__item">
-                        <a className="sidebar__menu__link" href="#">
+                        <Link to="/payments" className="sidebar__menu__link" href="#">
                             <i className="las la-credit-card" />
                             <span className={sideBarOpen ? 'inactive--span' : ''}>
                                 Pagamentos
-                                </span>
-                        </a>
+                            </span>
+                        </Link>
                     </li>
 
                 </ul>
+
             </div>
 
         </div>
